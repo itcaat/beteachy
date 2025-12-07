@@ -111,6 +111,87 @@ body {
     50% { opacity: 1; transform: scale(1.1); }
 }
 
+/* === Snowflakes === */
+.snowflakes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.snowflake {
+    position: absolute;
+    top: -20px;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1rem;
+    animation: fall linear infinite;
+}
+
+.snowflake:nth-child(1) {
+    left: 10%;
+    font-size: 1.2rem;
+    animation-duration: 15s;
+    animation-delay: 0s;
+}
+
+.snowflake:nth-child(2) {
+    left: 30%;
+    font-size: 0.8rem;
+    animation-duration: 18s;
+    animation-delay: 2s;
+}
+
+.snowflake:nth-child(3) {
+    left: 50%;
+    font-size: 1rem;
+    animation-duration: 20s;
+    animation-delay: 4s;
+}
+
+.snowflake:nth-child(4) {
+    left: 70%;
+    font-size: 0.9rem;
+    animation-duration: 16s;
+    animation-delay: 1s;
+}
+
+.snowflake:nth-child(5) {
+    left: 85%;
+    font-size: 1.1rem;
+    animation-duration: 22s;
+    animation-delay: 3s;
+}
+
+.snowflake:nth-child(6) {
+    left: 95%;
+    font-size: 0.7rem;
+    animation-duration: 17s;
+    animation-delay: 5s;
+}
+
+@keyframes fall {
+    0% {
+        top: -20px;
+        opacity: 0;
+        transform: translateX(0) rotate(0deg);
+    }
+    10% {
+        opacity: 0.4;
+    }
+    90% {
+        opacity: 0.4;
+    }
+    100% {
+        top: 100vh;
+        opacity: 0;
+        transform: translateX(30px) rotate(360deg);
+    }
+}
+
 /* === Navigation === */
 .main-nav {
     margin-bottom: var(--spacing-lg);
