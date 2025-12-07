@@ -1,0 +1,91 @@
+{{ define "main" }}
+<div class="page-wrapper">
+    <!-- Decorative elements -->
+    <div class="deco-line deco-line-1"></div>
+    <div class="deco-line deco-line-2"></div>
+    <div class="deco-star deco-star-1">✴</div>
+    <div class="deco-star deco-star-2">✴</div>
+    <div class="deco-star deco-star-3">✴</div>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <ul>
+            {{ range .Site.Menus.main }}
+            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+            {{ end }}
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="hero">
+        <div class="hero-left">
+            <p class="tagline">
+                МЕТОДИЧЕСКАЯ ПОДДЕРЖКА<br>
+                МАТЕРИАЛЫ ДЛЯ РЕПЕТИТОРОВ<br>
+                ЛАЙФХАКИ ДЛЯ РАБОТЫ
+            </p>
+            
+            <h1 class="main-title">КРЕАТОР УРОКОВ</h1>
+            
+            <div class="preview-section">
+                <div class="preview-gallery">
+                    <div class="preview-card card-1">
+                        <img src="/images/board1.png" alt="Урок английского">
+                    </div>
+                    <div class="preview-card card-2">
+                        <img src="/images/board2.png" alt="Winter self-care">
+                    </div>
+                    <div class="preview-card card-3">
+                        <img src="/images/board3.png" alt="Countable uncountable">
+                    </div>
+                    <div class="preview-card card-4">
+                        <img src="/images/board4.png" alt="Warm up">
+                    </div>
+                    <div class="preview-card card-5">
+                        <img src="/images/board5.png" alt="Tic-Tac-Toe">
+                    </div>
+                </div>
+                
+                <div class="tools-logos">
+                    <div class="tool-logo miro">
+                        <span class="miro-icon">⫶⫶</span>
+                        <span>miro</span>
+                    </div>
+                    <div class="tool-logo holst">
+                        <span class="holst-icon">✦</span>
+                        <span>holst</span>
+                    </div>
+                    <a href="https://t.me/anna_beteachy" target="_blank" class="tool-logo telegram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                        </svg>
+                        <span>@anna_beteachy</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-right">
+            <div class="photo-stack">
+                <div class="photo photo-1">
+                    <div class="photo-inner">
+                        <img src="/images/photo1.jpg" alt="Репетитор английского">
+                    </div>
+                </div>
+                <div class="photo photo-2">
+                    <div class="photo-inner">
+                        <img src="/images/photo2.jpg" alt="Уютная атмосфера обучения">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Lightbox Popup -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <img class="lightbox-image" id="lightbox-img" src="" alt="Preview">
+    </div>
+</div>
+{{ end }}
+

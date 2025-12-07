@@ -1,0 +1,39 @@
+baseURL = 'https://beteachy.ru/'
+languageCode = 'ru-RU'
+title = 'BeTeachy - Креатор уроков'
+defaultContentLanguage = 'ru'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  description = 'Методическая поддержка и материалы для репетиторов английского языка'
+  author = 'BeTeachy'
+
+[menu]
+  [[menu.main]]
+    name = 'АНГЛИЙСКИЙ ДЕТЯМ'
+    url = '/'
+    weight = 1
+  [[menu.main]]
+    name = 'КРЕАТИВ'
+    url = '/creative/'
+    weight = 2
+  [[menu.main]]
+    name = 'ОНЛАЙН УРОКИ'
+    url = '/online/'
+    weight = 3
+  [[menu.main]]
+    name = 'МИРО'
+    url = '/miro/'
+    weight = 4
+  [[menu.main]]
+    name = 'ХОЛСТ'
+    url = '/holst/'
+    weight = 5
+  [[menu.main]]
+    name = 'ТРЕНИНГ'
+    url = '/training/'
+    weight = 6

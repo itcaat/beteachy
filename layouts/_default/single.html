@@ -1,0 +1,27 @@
+{{ define "main" }}
+<div class="page-wrapper">
+    <!-- Decorative elements -->
+    <div class="deco-line deco-line-1"></div>
+    <div class="deco-line deco-line-2"></div>
+    <div class="deco-star deco-star-1">✴</div>
+    <div class="deco-star deco-star-2">✴</div>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <ul>
+            {{ range .Site.Menus.main }}
+            <li><a href="{{ .URL }}"{{ if eq $.RelPermalink .URL }} class="active"{{ end }}>{{ .Name }}</a></li>
+            {{ end }}
+        </ul>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="page-content">
+        <h1 class="page-title">{{ .Title }}</h1>
+        <div class="content-body">
+            {{ .Content }}
+        </div>
+    </main>
+</div>
+{{ end }}
+
